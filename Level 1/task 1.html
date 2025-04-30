@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+        .container{
+            margin: 20px 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 20%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+        }
+        
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-left: 5px;
+        }
+
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome to my first task </h1>
+        <p>This is a basic webpage with a heading, paragraph, and an image.</p>
+        <img src="https://cognifyz.com/wp-content/uploads/2022/06/rocket-2.png" alt="this image choose in cognifyz.com">
+
+        <!-- Form -->
+        <form>
+            <input type="text" placeholder="Enter your name">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>

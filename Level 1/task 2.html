@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Color Change and Alert</title>
+    <script src="https://kit.fontawesome.com/d7aaf20f1c.js" crossorigin="anonymous"></script>
+    <style>
+        button{
+            padding: 8px 15px;
+            border: none;
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            border-radius: 10px;
+        }
+        body{
+            margin: 40px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #0a2c4e;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        input {
+            width: 50px;
+            padding: 5px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+        }
+        input:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h3> part-I</h3>
+
+    <button id="colorChange">Color</button>
+    <h3>part-II</h3>
+    <button id="alert">Submit</button>
+     
+    <h3>part-III</h3>
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <span ><i class="fa-solid fa-plus-minus"></i></span>
+    <input type="number" id="num2" placeholder="Enter second number">
+    <button id="addBtn">Add</button>
+    <button id="subtract">subtract</button>
+    <p>Result: <span id="result">0</span></p>
+
+
+    <script>
+        document.getElementById("colorChange").addEventListener("click", () => {
+            let button = document.getElementById("colorChange");
+            let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            let color = "#" + Math.floor(Math.random()*16777215).toString(16);
+
+            button.style.backgroundColor = randomColor;
+            button.style.color = color; 
+        });
+
+        document.getElementById("alert").addEventListener("click", () => {
+            alert("This is the submit button");
+        });
+        document.getElementById("addBtn").addEventListener("click", () => {
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            
+            if (!isNaN(num1) && !isNaN(num2)) {
+                document.getElementById("result").innerText = num1 + num2;
+            } else {
+                alert("Please enter valid numbers!");
+            }
+        });
+        document.getElementById("subtract").addEventListener("click",()=>{
+            let num1 = parseInt(document.getElementById("num1").value);
+            let num2 = parseInt(document.getElementById("num2").value);
+            if (!isNaN(num1) && !isNaN(num2)) {
+                document.getElementById("result").innerText = num1 - num2;
+            }
+            else if (!isNaN(num1) && !isNaN(num2)) {
+                document.getElementById("result").innerText = num2 - num1;
+            }
+             else {
+                alert("Please enter valid numbers!");
+            }
+        });
+       
+
+    </script>
+</body>
+</html>
